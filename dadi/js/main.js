@@ -23,7 +23,7 @@ btnGenerator.addEventListener('click', function(event){
     const playerNumber = Math.floor(Math.random() * 6) + 1;
     firstItem.innerHTML =`il numero del giocatore e': ${ playerNumber}`;
     const pcNumber = Math.floor(Math.random() * 6) + 1;
-    secondItem.innerHTML = `il numero del pc e': ${ playerNumber}`;
+    secondItem.innerHTML = `il numero del pc e': ${ pcNumber}`;
     let result;
     if(playerNumber > pcNumber){
         result = `il giocatore ha vinto contro il pc con una differenza di ${playerNumber - pcNumber}`;
@@ -32,7 +32,7 @@ btnGenerator.addEventListener('click', function(event){
         result = `il pc ha vinto contro il giocatore con una differenza di ${pcNumber - playerNumber}`;
     }
     else{
-        result = `pari, ritira il dado`
+        result = `pari, ritira il dado`;
     }
     stringVictory.innerHTML = result;
     secondSection.append(stringVictory)
